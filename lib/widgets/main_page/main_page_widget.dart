@@ -42,87 +42,72 @@ class MainScreenWidget extends StatelessWidget {
       child: Container(
         color: Colors.black12,
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround2343,
           children: [
-            Expanded(
-                child: Column(
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Text(
+                  User.nameUser,
+                  style: const TextStyle(fontSize: 20),
+                  textAlign: TextAlign.center,
+                ),
+                Image.asset('assets/images/cat.webp',height: 170,width: 170,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Expanded(
-                      flex:1,
-                      child: SizedBox(
-                          height: 30,
-                          child: Text(
-                            User.nameUser,
-                            style: const TextStyle(fontSize: 20),
-                            textAlign: TextAlign.center,
-                          )),
-                    ),
-                    Expanded(flex:5,child: Image.asset('assets/images/cat.webp',height: 100,)),
-                    Expanded(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          model.user.hp > 0
-                              ? const Icon(Icons.star)
-                              : const Icon(Icons.star_border),
-                          model.user.hp > 1
-                              ? const Icon(Icons.star)
-                              : const Icon(Icons.star_border),
-                          model.user.hp > 2
-                              ? const Icon(Icons.star)
-                              : const Icon(Icons.star_border),
-                          model.user.hp > 3
-                              ? const Icon(Icons.star)
-                              : const Icon(Icons.star_border),
-                          model.user.hp > 4
-                              ? const Icon(Icons.star)
-                              : const Icon(Icons.star_border),
-                        ],
-                      ),
-                    ),
+                    model.user.hp > 0
+                        ? const Icon(Icons.star)
+                        : const Icon(Icons.star_border),
+                    model.user.hp > 1
+                        ? const Icon(Icons.star)
+                        : const Icon(Icons.star_border),
+                    model.user.hp > 2
+                        ? const Icon(Icons.star)
+                        : const Icon(Icons.star_border),
+                    model.user.hp > 3
+                        ? const Icon(Icons.star)
+                        : const Icon(Icons.star_border),
+                    model.user.hp > 4
+                        ? const Icon(Icons.star)
+                        : const Icon(Icons.star_border),
                   ],
-                )),
-            Expanded(
-                flex:1,
-                child: Column(
+                ),
+              ],
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Text(
+                  model.bot.name,
+                  style: const TextStyle(fontSize: 20),
+                  textAlign: TextAlign.center,
+                ),
+                Image.asset('assets/images/bot1.jpg',height: 170,width: 170,),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Expanded(
-                      flex:1,
-                      child: SizedBox(
-                          height: 30,
-                          child: Text(
-                            model.bot.name,
-                            style: const TextStyle(fontSize: 20),
-                            textAlign: TextAlign.center,
-                          )),
-                    ),
-                    Expanded(flex:5,child: Image.asset('assets/images/bot1.jpg',height: 100,)),
-                    Expanded(
-                      flex:1,
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          model.bot.hp > 0
-                              ? const Icon(Icons.star)
-                              : const Icon(Icons.star_border),
-                          model.bot.hp > 1
-                              ? const Icon(Icons.star)
-                              : const Icon(Icons.star_border),
-                          model.bot.hp > 2
-                              ? const Icon(Icons.star)
-                              : const Icon(Icons.star_border),
-                          model.bot.hp > 3
-                              ? const Icon(Icons.star)
-                              : const Icon(Icons.star_border),
-                          model.bot.hp > 4
-                              ? const Icon(Icons.star)
-                              : const Icon(Icons.star_border),
-                        ],
-                      ),
-                    ),
+                    model.bot.hp > 0
+                        ? const Icon(Icons.star)
+                        : const Icon(Icons.star_border),
+                    model.bot.hp > 1
+                        ? const Icon(Icons.star)
+                        : const Icon(Icons.star_border),
+                    model.bot.hp > 2
+                        ? const Icon(Icons.star)
+                        : const Icon(Icons.star_border),
+                    model.bot.hp > 3
+                        ? const Icon(Icons.star)
+                        : const Icon(Icons.star_border),
+                    model.bot.hp > 4
+                        ? const Icon(Icons.star)
+                        : const Icon(Icons.star_border),
                   ],
-                )),
+                ),
+              ],
+            ),
           ],
         ),
       ),

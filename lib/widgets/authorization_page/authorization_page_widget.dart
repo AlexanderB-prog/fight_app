@@ -11,24 +11,27 @@ class AuthorizationPageWidget extends StatelessWidget {
         child: Scaffold(
       backgroundColor: Colors.white,
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Column(
-            children: [const
-              SizedBox(height: 50),
+            children: [
+              const SizedBox(height: 50),
               const Text(
                 'Победи противника!',
                 style: TextStyle(fontSize: 30),
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 80),
               const Icon(
                 Icons.man,
                 size: 50,
               ),
-              const SizedBox(height: 30),
+              const SizedBox(height: 80),
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextField(
-                  onChanged: (text) {User.nameUser=text;},
+                  onChanged: (text) {
+                    User.nameUser = text;
+                  },
                   autofocus: true,
                   decoration: const InputDecoration(
                     enabledBorder: OutlineInputBorder(
@@ -41,16 +44,22 @@ class AuthorizationPageWidget extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 30),
-              TextButton(
-                  onPressed: () {
-                    Navigator.pushReplacementNamed(context, Screens.main);
 
-                  },
-                  child: const Text('Начать битву'))
             ],
           ),
-          Expanded(child: Container()),
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+
+                TextButton(
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(context, Screens.main);
+                    },
+                    child: const Text('Начать битву')),
+              ],
+            ),
+          )
         ],
       ),
     ));
