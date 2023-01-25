@@ -1,7 +1,6 @@
 import 'package:fight_app/entity/user.dart';
 import 'package:fight_app/model/main_page_model/main_page_model.dart';
 import 'package:fight_app/navigation/main_navigation.dart';
-import 'package:fight_app/widgets/main_page/popup_page.dart';
 import 'package:flutter/material.dart';
 
 class MainPageWidget extends StatelessWidget {
@@ -42,7 +41,7 @@ class MainScreenWidget extends StatelessWidget {
       child: Container(
         color: Colors.black12,
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround2343,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
